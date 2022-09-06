@@ -175,9 +175,9 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
         # 获取距离下次生日的时间
         birth_day = get_birthday(value["birthday"], year, today)
         if birth_day == 0:
-            birthday_data = "⏳今天{}的日子到了哦，祝{}上岸！".format(value["name"], value["name"])
+            birthday_data = "⏰ 今天{}的日子到了哦，祝{}上岸！".format(value["name"], value["name"])
         else:
-            birthday_data = "⏳距离{}的时间还剩下{}天".format(value["name"], birth_day)
+            birthday_data = "⏰ 距离{}的时间还剩下{}天".format(value["name"], birth_day)
         # 将生日数据插入data
         data["data"][key] = {"value": birthday_data, "color": get_color()}
     headers = {
